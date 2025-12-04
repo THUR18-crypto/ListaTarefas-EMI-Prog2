@@ -78,6 +78,8 @@ function cadastrarTarefa(evento) {
     // b. Adicione o objeto criado ao array 'listaTarefas'.
     listaTarefas.push(obj_tarefa);
 
+    localStorage.setItem("listaTarefas", JSON.stringify(listaTarefas));
+
     // c. Chame a função 'carregarTarefas()' para atualizar a lista na tela.
     carregarTarefas();
     // Limpando o formulário usando 'reset()'.
